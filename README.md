@@ -6,11 +6,6 @@ double potencia(double x, int n) {
         return 1;
     }
     
-    if (n < 0) {
-        return 1 / potencia(x, -n);
-    }
-    
-
     double mitad = potencia(x, n / 2);
     
 
@@ -27,7 +22,7 @@ int main() {
     double base = 2.0;
     int exponente = 3;
     
-    std::cout << base << " elevado a " << exponente << " es: " << potencia(base, exponente) << std::endl;
+    cout << base << " elevado a " << exponente << " es: " << potencia(base, exponente) <<endl;
     
     return 0;
 }
