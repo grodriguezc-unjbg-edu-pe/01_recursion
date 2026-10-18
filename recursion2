@@ -1,0 +1,28 @@
+
+#include <iostream>
+using namespace std;
+
+int sumar(int A[], int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return A[n - 1] + sumar(A, n - 1);
+}
+
+int main() {
+    int A[100], n;
+
+    cout << "Ingrese la cantidad de elementos: ";
+    cin >> n;
+
+    cout << "Ingrese los elementos del arreglo:\n";
+    for (int i = 0; i < n; i++) {
+        cout << "A[" << i << "] = ";
+        cin >> A[i];
+    }
+
+    cout << "La suma de los elementos es: "
+         << sumar(A, n) << endl;
+
+    return 0;
+}
